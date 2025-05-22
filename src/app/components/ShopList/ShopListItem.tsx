@@ -44,7 +44,7 @@ export const ShopListItem = memo(function ShopListItem({ shop }: ShopListItemPro
         {/* Main info */}
         <div className="flex flex-1 flex-col gap-2">
           <div className="flex flex-col gap-2 md:flex-row md:items-center">
-            <h3 className="text-foreground truncate text-lg font-bold">{shop.name}</h3>
+            <h2 className="text-foreground truncate text-lg font-bold">{shop.name}</h2>
           </div>
 
           {/* Status Badge */}

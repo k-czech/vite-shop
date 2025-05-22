@@ -7,9 +7,7 @@ export function ThemeToggle() {
 
   return (
     <div className="mode-toggle">
-      <span className="theme-label" style={{ opacity: isDark ? 1 : 0.5 }}>
-        Dark
-      </span>
+      <span className={`theme-label ${isDark ? 'active' : ''}`}>Dark</span>
       <button
         onClick={toggleTheme}
         className="toggle-switch"
@@ -17,9 +15,7 @@ export function ThemeToggle() {
         aria-checked={isDark}
         aria-label="Przełącz motyw"
       />
-      <span className="theme-label" style={{ opacity: isDark ? 0.5 : 1 }}>
-        Light
-      </span>
+      <span className={`theme-label ${!isDark ? 'active' : ''}`}>Light</span>
     </div>
   );
 }

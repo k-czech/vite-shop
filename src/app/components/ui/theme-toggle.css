@@ -2,8 +2,8 @@
   --gray-5: #010101;
   --gray-35: #2d2f31;
   --gray-40: #404346;
-  --gray-45: #5b5e62;
-  --gray-60: #b9bdc1;
+  --gray-45: #2d2f31;
+  --gray-60: #767a7d;
   --gray-65: #cdd1d5;
   --gray-70: #dce0e3;
   --gray-95: #fcfefe;
@@ -29,8 +29,16 @@
   font-weight: 600;
 }
 
+.theme-label.active {
+  color: var(--gray-5);
+}
+
 .dark .theme-label {
   color: var(--gray-60);
+}
+
+.dark .theme-label.active {
+  color: var(--gray-95);
 }
 
 .toggle-switch {
