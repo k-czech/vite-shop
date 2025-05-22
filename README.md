@@ -1,3 +1,72 @@
+# Vite Shop
+
+Aplikacja sklepowa zbudowana przy użyciu Vite, React, TypeScript i Tailwind CSS.
+
+## Funkcjonalności
+
+- Lista sklepów z wirtualizacją (react-window)
+- Lazy loading obrazów
+- Tryb ciemny/jasny
+- Responsywny design
+- Optymalizacja wydajności
+
+## Technologie
+
+- Vite
+- React 18
+- TypeScript
+- Tailwind CSS
+- React Window (wirtualizacja)
+- ESLint + Prettier
+- Vitest + React Testing Library
+
+## Wymagania
+
+- Node.js >= 18
+- pnpm >= 10
+
+## Instalacja
+
+```bash
+# Instalacja zależności
+pnpm install
+
+# Uruchomienie w trybie deweloperskim
+pnpm dev
+
+# Build produkcyjny
+pnpm build
+
+# Uruchomienie testów
+pnpm test
+```
+
+## Struktura projektu
+
+```
+/
+├─ src/                # Kod aplikacji
+│  ├─ app/            # Warstwa funkcjonalna (feature-slice)
+│  │  ├─ components/  # Komponenty UI
+│  │  ├─ hooks/       # Reużywalne hooki
+│  │  ├─ utils/       # Logika biznesowa
+│  │  ├─ types/       # Typy TypeScript
+│  │  └─ pages/       # Strony
+│  ├─ api/            # Klienty HTTP
+│  ├─ assets/         # Statyczne zasoby
+│  └─ styles/         # Style globalne
+├─ public/            # Pliki statyczne
+└─ tests/             # Testy
+```
+
+## Konwencje
+
+- Feature-slice architecture
+- Atomic Design dla komponentów
+- Strict TypeScript
+- Tailwind dla stylowania
+- Conventional Commits
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

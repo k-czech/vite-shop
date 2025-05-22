@@ -1,0 +1,114 @@
+:root {
+  --gray-5: #010101;
+  --gray-35: #2d2f31;
+  --gray-40: #404346;
+  --gray-45: #5b5e62;
+  --gray-60: #b9bdc1;
+  --gray-65: #cdd1d5;
+  --gray-70: #dce0e3;
+  --gray-95: #fcfefe;
+  --animate: 200ms;
+}
+
+.mode-toggle {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  user-select: none;
+}
+
+.mode-toggle h6 {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  padding: 8px 12px;
+  min-width: 32px;
+  text-align: center;
+  margin: 0;
+  color: var(--gray-45);
+  transition: color var(--animate) ease-in-out;
+}
+
+.dark .mode-toggle h6 {
+  color: var(--gray-60);
+}
+
+.toggle-switch {
+  margin: 0;
+  padding: 0;
+  width: 48px;
+  height: 28px;
+  border: none;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  border-radius: 14px;
+  display: inline-block;
+  background: var(--gray-40);
+  transition: all var(--animate) ease-in-out;
+}
+
+.dark .toggle-switch {
+  background: var(--gray-70);
+}
+
+.toggle-switch::before {
+  content: '';
+  top: 4px;
+  left: 24px;
+  width: 20px;
+  height: 20px;
+  display: block;
+  position: absolute;
+  border-radius: 12px;
+  background: var(--gray-70);
+  transition: all var(--animate) ease-in-out;
+}
+
+.dark .toggle-switch::before {
+  left: 4px;
+  background: var(--gray-35);
+}
+
+.toggle-switch::after {
+  content: '';
+  top: 14px;
+  right: 2px;
+  width: 1px;
+  height: 1px;
+  display: block;
+  position: absolute;
+  border-radius: 0.5px;
+  background: var(--gray-40);
+  transition: all var(--animate) ease-in-out;
+}
+
+.dark .toggle-switch::after {
+  top: -2px;
+  right: 2px;
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  background: var(--gray-70);
+}
+
+.toggle-switch:hover,
+.toggle-switch:hover::after {
+  background: var(--gray-35);
+}
+
+.dark .toggle-switch:hover,
+.dark .toggle-switch:hover::after {
+  background: var(--gray-95);
+}
+
+.toggle-switch:focus,
+.toggle-switch:active,
+.toggle-switch:active::after {
+  background: var(--gray-5);
+}
+
+.dark .toggle-switch:focus,
+.dark .toggle-switch:active,
+.dark .toggle-switch:active::after {
+  background: var(--gray-65);
+}
