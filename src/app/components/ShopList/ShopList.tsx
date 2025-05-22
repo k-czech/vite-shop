@@ -45,7 +45,7 @@ export const ShopList = memo(function ShopList({ shops }: ShopListProps) {
 
       <div style={{ height: 'calc(100vh - 200px)', width: '100%' }}>
         <AutoSizer>
-          {({ height, width }: { height: number; width: number }) => (
+          {({ height, width }) => (
             <FixedSizeList
               width={width}
               height={height}
