@@ -4,7 +4,6 @@ type Theme = 'light' | 'dark';
 
 export function useTheme() {
   const [theme, setTheme] = useState<Theme>(() => {
-    // Check localStorage first
     const savedTheme = localStorage.getItem('theme') as Theme | null;
     if (savedTheme) return savedTheme;
 
@@ -28,7 +27,6 @@ export function useTheme() {
     root.classList.add(theme);
     body.classList.add(theme);
 
-    // Save to localStorage
     localStorage.setItem('theme', theme);
   }, [theme]);
 

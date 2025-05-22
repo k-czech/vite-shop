@@ -1,10 +1,10 @@
 import { memo } from 'react';
 import { ShopType } from '@app/types/Shop';
 
-interface ShopBadgeProps {
+type ShopBadgeProps = {
   type: ShopType;
   className?: string;
-}
+};
 
 export const ShopBadge = memo(function ShopBadge({ type, className }: ShopBadgeProps) {
   const badgeClasses =

@@ -4,9 +4,9 @@ import { memo } from 'react';
 import AutoSizer from 'react-virtualized-auto-sizer';
 import { FixedSizeList, ListChildComponentProps } from 'react-window';
 
-interface ShopListProps {
+type ShopListProps = {
   shops: Shop[];
-}
+};
 
 export const ShopList = memo(function ShopList({ shops }: ShopListProps) {
   if (!Array.isArray(shops)) {

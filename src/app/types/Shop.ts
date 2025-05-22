@@ -1,14 +1,14 @@
 export type ShopType = 'FRANCHISE' | 'REGULAR';
 
-export interface Shop {
+export type Shop = {
   id: string;
   name: string;
   address: string;
   type: ShopType;
   imageUrl: string;
-}
+};
 
-export interface ParsedAddress {
+export type ParsedAddress = {
   street: string;
   city: string;
-}
+};

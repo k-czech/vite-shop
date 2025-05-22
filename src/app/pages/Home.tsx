@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import { Shop } from '@app/types/Shop';
-import { getShops } from '@api/shops';
+import { getShops } from '@/services/shops';
 import { ShopList } from '@app/components/ShopList/ShopList';
 import { ThemeToggle } from '@app/components/ui/ThemeToggle';
 
-export function Home() {
+function Home() {
   const [shops, setShops] = useState<Shop[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -56,3 +56,5 @@ export function Home() {
     </main>
   );
 }
+
+export default Home;

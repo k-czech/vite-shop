@@ -2,13 +2,13 @@ import { memo } from 'react';
 import { useImage } from '@app/hooks/useImage';
 import { Skeleton } from '@app/components/ui/Skeleton';
 
-interface ImageWithFallbackProps {
+type ImageWithFallbackProps = {
   src: string;
   alt: string;
   className?: string;
   width?: number;
   height?: number;
-}
+};
 
 export const ImageWithFallback = memo(function ImageWithFallback({
   src,

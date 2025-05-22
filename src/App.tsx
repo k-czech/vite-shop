@@ -1,14 +1,13 @@
-import { Home } from '@app/pages/Home';
 import { useTheme } from '@app/hooks/useTheme';
+import { MainContent } from '@app/routes';
 import '@styles/globals.css';
 
 function App() {
-  // Initialize theme
   useTheme();
 
   return (
     <div className="bg-background text-foreground min-h-screen w-full">
-      <Home />
+      <MainContent />
     </div>
   );
 }

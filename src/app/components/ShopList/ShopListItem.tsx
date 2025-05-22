@@ -5,9 +5,9 @@ import { ImageWithFallback } from '@app/components/ShopList/ImageWithFallback';
 import { ShopBadge } from '@app/components/ShopList/ShopBadge';
 import { Star, Tag, MapPin, Heart } from 'lucide-react';
 
-interface ShopListItemProps {
+type ShopListItemProps = {
   shop: Shop;
-}
+};
 
 export const ShopListItem = memo(function ShopListItem({ shop }: ShopListItemProps) {
   if (!shop || typeof shop !== 'object') {

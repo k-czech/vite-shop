@@ -1,22 +1,18 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
-interface UseImageProps {
+type UseImageProps = {
   src: string;
   onLoad?: () => void;
   onError?: () => void;
-}
+};
 
-interface UseImageReturn {
+type UseImageReturn = {
   isLoading: boolean;
   hasError: boolean;
   imageSrc: string | null;
-}
+};
 
-export function useImage({
-  src,
-  onLoad,
-  onError,
-}: UseImageProps): UseImageReturn {
+export function useImage({ src, onLoad, onError }: UseImageProps): UseImageReturn {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
   const [imageSrc, setImageSrc] = useState<string | null>(null);
