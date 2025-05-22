@@ -11,11 +11,15 @@ vi.mock('react-virtualized-auto-sizer', () => ({
 vi.mock('react-window', () => ({
   FixedSizeList: ({ children, itemCount }: any) => (
     <div data-testid="virtual-list" style={{ height: '500px', width: '1000px' }}>
-      {Array.from({ length: itemCount }).map((_, index) => (
-        <div key={index} data-testid="list-item">
-          {children({ index, style: {} })}
-        </div>
-      ))}
+      {Array.from({ length: itemCount }).map((_, index) => {
+        const child = children({ index, style: {} });
+        const testId = `list-item-${Math.random().toString(36).substr(2, 9)}`;
+        return (
+          <div key={testId} data-testid="list-item">
+            {child}
+          </div>
+        );
+      })}
     </div>
   ),
 }));
