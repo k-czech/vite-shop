@@ -13,7 +13,7 @@ Aplikacja sklepowa zbudowana przy użyciu Vite, React, TypeScript i Tailwind CSS
 ## Technologie
 
 - Vite
-- React 18
+- React 19
 - TypeScript
 - Tailwind CSS
 - React Window (wirtualizacja)
