@@ -15,12 +15,10 @@ export const ShopListItem = memo(function ShopListItem({ shop }: ShopListItemPro
 
   return (
     <div className="border-border hover:bg-muted flex w-full flex-col p-3 transition-colors md:flex-row md:items-center md:p-4">
-      {/* Mobile: Top section with image and main info */}
       <div className="flex items-center gap-4 md:w-[calc(80px+40%)]">
         <div className="md:min-w-[30px]">
           <span className="text-muted-foreground">{shop.id}</span>
         </div>
-        {/* Image container */}
         <div className="relative">
           <ImageWithFallback
             src={shop.imageUrl}
@@ -42,23 +40,19 @@ export const ShopListItem = memo(function ShopListItem({ shop }: ShopListItemPro
             <h2 className="text-foreground truncate text-lg font-bold">{shop.name}</h2>
           </div>
 
-          {/* Status Badge */}
           <ShopBadge type={shop.type} className="md:hidden" />
 
-          {/* Rating */}
           <div className="flex items-center gap-1 text-sm">
             <Star className="h-4 w-4 text-yellow-400" />
             <span className="text-muted-foreground">4.5</span>
             <span className="text-muted-foreground/60">(423 opinie)</span>
           </div>
 
-          {/* Price range */}
           <div className="flex items-center gap-1 text-sm">
             <Tag className="h-4 w-4 text-green-600" />
             <span className="text-muted-foreground">Cena od 10 zł do 95 zł</span>
           </div>
 
-          {/* Address - mobile only */}
           <div className="flex items-center gap-1 text-sm md:hidden">
             <MapPin className="h-4 w-4 text-red-500" />
             <span className="text-muted-foreground truncate">{address}</span>
@@ -68,15 +62,12 @@ export const ShopListItem = memo(function ShopListItem({ shop }: ShopListItemPro
 
       {/* Desktop only content */}
       <div className="hidden md:flex md:flex-1 md:items-center md:gap-4">
-        {/* Address */}
         <div className="min-w-0 flex-1">
           <span className="text-muted-foreground block truncate text-sm">{address}</span>
         </div>
 
-        {/* Status Badge */}
         <ShopBadge type={shop.type} />
 
-        {/* Actions */}
         <div className="flex w-[52px] flex-shrink-0 justify-center">
           <button
             className="text-muted-foreground/60 hover:bg-muted rounded-full p-2 transition-colors hover:text-yellow-500"
