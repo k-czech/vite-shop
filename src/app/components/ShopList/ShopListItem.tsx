@@ -10,11 +10,6 @@ type ShopListItemProps = {
 };
 
 export const ShopListItem = memo(function ShopListItem({ shop }: ShopListItemProps) {
-  if (!shop || typeof shop !== 'object') {
-    console.error('Invalid shop data:', shop);
-    return null;
-  }
-
   const { street, city } = getParsedAddress(shop.address);
   const address = `${street}, ${city}`;
 
