@@ -1,4 +1,4 @@
-import { ShopListItem } from '@app/components/ShopList/ShopListItem';
+import { ShopListItem } from './ShopListItem';
 import { Shop } from '@app/types/Shop';
 import { memo } from 'react';
 import AutoSizer from 'react-virtualized-auto-sizer';
@@ -36,7 +36,6 @@ export const ShopList = memo(function ShopList({ shops }: ShopListProps) {
     <div className="bg-card w-full rounded-lg shadow">
       <div className="border-border bg-muted text-muted-foreground hidden w-full gap-4 md:flex md:flex-row md:items-center md:border-b md:px-4 md:py-3 md:text-sm md:font-medium">
         <div style={{ width: '30px' }}>ID</div>
-
         <div style={{ flex: 1 }}>Nazwa</div>
         <div style={{ flex: 1 }}>Adres</div>
         <div style={{ width: '100px' }}>Typ</div>
