@@ -7,9 +7,19 @@ export function ThemeToggle() {
 
   return (
     <div className="mode-toggle">
-      <h6 style={{ opacity: isDark ? 1 : 0.5 }}>Dark</h6>
-      <button onClick={toggleTheme} className="toggle-switch" role="switch" aria-checked={isDark} />
-      <h6 style={{ opacity: isDark ? 0.5 : 1 }}>Light</h6>
+      <span className="theme-label" style={{ opacity: isDark ? 1 : 0.5 }}>
+        Dark
+      </span>
+      <button
+        onClick={toggleTheme}
+        className="toggle-switch"
+        role="switch"
+        aria-checked={isDark}
+        aria-label="Przełącz motyw"
+      />
+      <span className="theme-label" style={{ opacity: isDark ? 0.5 : 1 }}>
+        Light
+      </span>
     </div>
   );
 }
